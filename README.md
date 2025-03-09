@@ -18,13 +18,18 @@ This project aims to detect human stress levels based on sleeping habits using v
 │-- 📜 README.md          # Project documentation
 ```
 
-## 📊 Dataset
+## Dataset
 The dataset consists of:
 - Sleep duration
-- Heart rate
-- Sleep interruptions
-- Daily activity levels
-- Stress levels (target variable)
+- Snoringe Range
+- Respiration Rate
+- Body Temperature
+- Limb Movment Rate
+- Blood Oxgyen
+- Eye Movement
+- Number Of Hours Sleep
+- Heart Rate
+- Stress Level
 
 ## Technologies Used
 - **Programming Language**: Python
