@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Human Stress Detection-login</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/login.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+    <script>
+        function login() {
+            var uname = document.getElementById("uname").value;
+            var pwd = document.getElementById("pwd").value;
+            if (uname === "" || pwd === "") {
+             alert("Please enter both username and password.");
+                 return;
+                }
+            if (uname === "major" && pwd === "12345") {
+                alert("Login Success!");
+                window.location = "{{url_for('upload')}}";
+            } else {
+                alert("Invalid Credentials!");
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="masthead" class="site-header site-header-white">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="site-title"><span>Human Stress </span>Detection</a>
+                </div>
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="active"><a href="{{ url_for('login') }}">Login</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Login</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Human Stress Detection</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+   <!-- Main Content -->
+<main id="main" class="site-main">
+    <section class="site-section section-ui-elements">
+        <div class="container">
+            <div class="typography">
+                <h2 class="text-center heading-separator">Login</h2> 
+                <!-- Login Form -->
+                <div class="row">
+                    <div class="col-md-10 col-lg-6" style="margin-left:300px">
+                        <label class="control-label" for="username"><b>Username</b></label>
+                        <input type="text" id="uname" name="uname" class="form-control">
+                        <br>
+                        <label class="control-label" for="password"><b>Password</b></label>
+                        <input type="password" id="pwd" name="pwd" class="form-control">
+                        <br>
+                        <input type="button" class="btn btn-success" value="Login" style="margin-left:160px;" onclick="login()">                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="footer" class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p><strong>Group Members:</strong> B. Ankitha, K. Karthik Reddy, M. Anitha, M. S. Hephzibah</p>
+                <p>&copy; 2025 Human Stress Detection. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- JavaScript  and bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-select.min.js"></script>
+    <script src="../static/js/jquery.slicknav.min.js"></script>
+    <script src="../static/js/jquery.countTo.min.js"></script>
+    <script src="../static/js/jquery.shuffle.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>

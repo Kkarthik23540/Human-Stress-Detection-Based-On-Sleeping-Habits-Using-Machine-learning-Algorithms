@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Human Stress Detection - Chart</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/chart.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+    <!-- Google Charts -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Class', 'Percentage'],
+                ['Low/Normal', 15],
+                ['Medium Low', 35],
+                ['Medium', 35],
+                ['Medium High', 15],
+                ['High', 15]
+            ]);
+
+            var options = {
+                title: 'Human Stress Levels',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="masthead" class="site-header site-header-white">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="site-title"><span>Human Stress </span>Detection</a>
+                </div>
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{url_for('index')}}">Home</a></li>
+                        <li><a href="{{url_for('login')}}">Login</a></li>
+                        <li><a href="{{url_for('upload')}}">Upload</a></li>
+                        <li><a href="{{url_for('prediction')}}">Prediction</a></li>
+                        <li><a href="{{url_for('performance')}}">Performance Analysis</a></li>
+                        <li class="active"><a href="{{url_for('chart')}}">Chart</a></li>
+                        <li><a href="{{url_for('logout')}}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Chart</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Human Stress Detection</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main" class="site-main">
+        <section class="site-section section-ui-elements">
+            <div class="container">
+                <div class="typography">
+                    <h2 class="text-center heading-separator">Stress Level Analysis</h2>
+                    <div class="chart-container">
+                        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><strong>Group Members:</strong> B. Ankitha, K. Karthik Reddy, M. Anitha, M. S. Hephzibah</p>
+                    <p>&copy; 2025 Human Stress Detection. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- JavaScript -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="../static/js/bootstrap.min.js"></script>
+     <script src="../static/js/bootstrap-select.min.js"></script>
+     <script src="../static/js/jquery.slicknav.min.js"></script>
+     <script src="../static/js/jquery.countTo.min.js"></script>
+     <script src="../static/js/jquery.shuffle.min.js"></script>
+     <script src="../static/js/script.js"></script>
+    
+</body>
+</html>

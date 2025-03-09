@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Human Stress Detection-logout</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/logout.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+    <!-- Google Charts -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+     <!-- Header & Navigation -->
+     <header id="masthead" class="site-header site-header-white">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="site-title"><span>Human Stress </span>Detection</a>
+                </div>
+              
+            </div>   
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Logout</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Human Stress Detection</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <main id="main" class="site-main">
+        <section class="site-section section-ui-elements">
+            <div class="container">
+                <div class="typography">
+                    <h2 class="text-center heading-separator">Logout</h2> 
+                    <!-- Logout  -->
+                    <div class="logout-container">
+                        <div class="logout-box">
+                            <h2>Are you sure you want to logout?</h2>
+                            <div class="logout-buttons">
+                                <button class="cancel-btn" onclick="goBack()">Cancel</button>
+                                <button class="logout-btn" onclick="logout()">Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><strong>Group Members:</strong> B. Ankitha, K. Karthik Reddy, M. Anitha, M. S. Hephzibah</p>
+                    <p>&copy; 2025 Human Stress Detection. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+      
+    <script>
+        function goBack() {
+            window.history.back(); 
+        }
+        function logout() {
+            window.location.href = "{{ url_for('index') }}"; 
+        }
+    </script>
+</body>
+</html>

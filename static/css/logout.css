@@ -1,0 +1,237 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #26272d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Site Header Styling */
+.site-header {
+    position: absolute;
+    padding: 40px 0 0;
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Header */
+.site-header {
+    position: absolute;
+    padding: 40px 0 0;
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+}
+.site-title {
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+}
+.site-title:hover {
+    color: #2ba55a;
+}
+.site-title span {
+    font-weight: 700;
+}
+
+/*hero section*/
+.hero {
+    height: 100%;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+.overlay:before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    position:relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.hero-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 75px;
+}
+.hero-text {
+    max-width: 890px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+.hero-text h1 {
+    position: relative;
+    margin: 5;
+}
+.subpage-hero {  
+    height: 320px;
+}
+.subpage-hero.overlay:before {
+    background-color: rgba(38,39,45,0.5);
+}
+.subpage-hero .hero-content,.subpage-hero .hero-content h1,.subpage-hero a { 
+    color: #ffffff;
+}
+.subpage-hero a:hover {
+    color: #6fc754;
+}
+.portfolio-hero {
+    background: url(../images/8logout.jpg) no-repeat center / cover;
+}
+.site-main {
+    padding: 2px 0 0px;
+}
+.site-section {
+    padding: 40px 0 10px;
+}
+
+/* heading */
+.heading-separator { 
+    position: relative;
+    margin: 0;
+    padding-bottom: 50px;
+}
+.heading-separator:after { 
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 80px;
+    margin: 0 auto;
+    background-color: #6fc754;
+}
+.breadcrumb { 
+    background-color: transparent;
+    position: relative;
+}
+.breadcrumb .active { 
+    color: #fff;
+}
+.text-center {
+    text-align: center;
+}
+/* Logout Container */
+.logout-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 50px;
+}
+
+.logout-box h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.logout-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb;
+    transform: translateY(-3px);
+}
+
+.logout-btn {
+    background-color: #ff0000;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #e60000;
+    transform: translateY(-3px);
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: black;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 300px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.site-footer p:hover {
+    color: #6fc754;
+    transform: scale(1.05);
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+        color: #6fc754;
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .logout-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .logout-box h2 {
+        font-size: 20px;
+    }
+
+    button, .logout-btn, .cancel-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .site-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) { 
+    .site-title {
+        font-size: 20px;
+    }
+    }
+    .hero {  
+        padding: 70px 15px 50px;
+        margin-top: 0px;
+    }
+    .hero-text h1 {  
+        font-size: 20px;
+    }
+   

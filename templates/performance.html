@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Human Stress Detection-performance</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/performance.css" rel="stylesheet">
+    <link href="../static/css/responsive.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="masthead" class="site-header site-header-white">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="site-title"><span>Human Stress </span>Detection</a>
+                </div>
+                <div class="collapse navbar-collapse" id="agency-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('upload') }}">Upload</a></li>
+                        <li><a href="{{ url_for('prediction') }}">Prediction</a></li>
+                        <li class="active"><a href="{{ url_for('performance') }}">Performance Analysis</a></li>
+                        <li><a href="{{ url_for('chart') }}">Chart</a></li>
+                    </ul>
+                </div>
+            </div>   
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Performance Analysis</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Human Stress Detection</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main" class="site-main">
+        <section class="site-section section-ui-elements">
+            <div class="container">
+                <div class="typography">
+                    <h2 class="text-center heading-separator">Performance Analysis</h2>
+
+                    <!-- Recall, Precision & F1 Score Table -->
+                    <div class="text-center">
+                        <h3 style="color:green;">Precision, Recall, and F1 Score </h3>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped text-center" style="max-width: 600px; margin: auto;">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th class="text-center">Class</th>
+                                        <th class="text-center">Precision</th>
+                                        <th class="text-center">Recall</th>
+                                        <th class="text-center">F1 Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0.98</td>
+                                        <td>1.00</td>
+                                        <td>0.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0.97</td>
+                                        <td>0.97</td>
+                                        <td>0.97</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>0.97</td>
+                                        <td>0.97</td>
+                                        <td>0.97</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>1.00</td>
+                                        <td>0.95</td>
+                                        <td>0.97</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>0.97</td>
+                                        <td>1.00</td>
+                                        <td>0.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+<br>
+                    <!-- Confusion Matrix -->
+                    <div class="text-center mt-5">
+                        <h3 style="color:green;">Confusion Matrix</h3>
+                        <img src="../static/images/confusion_matrix.jpg" style="width:650px; height:450px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p><strong>Group Members:</strong> B. Ankitha, K. Karthik Reddy, M. Anitha, M. S. Hephzibah</p>
+                    <p>&copy; 2025 Human Stress Detection. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap-select.min.js"></script>
+    <script src="../static/js/jquery.slicknav.min.js"></script>
+    <script src="../static/js/jquery.countTo.min.js"></script>
+    <script src="../static/js/jquery.shuffle.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>
